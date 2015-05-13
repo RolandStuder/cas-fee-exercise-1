@@ -1,0 +1,46 @@
+@import 'fixed-layout';
+
+
+.content {
+    margin-right: $nav-width;
+}
+
+.wrapper {
+    position: relative;
+}
+
+// for this solution the fixed element has to be first
+
+aside {
+    float: right;
+    width: $nav-width;
+}
+
+// aside {
+//     position: absolute;
+//     width: $nav-width;
+//     top: 0;
+//     right: 0;
+// }
+
+.content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    right: $nav-width;
+    left: 0;
+    background-color: $third;
+}
+
+aside:before { 
+    content: '';
+    position: absolute; // sets a new possitioning context, so it does not work anymore to use absolute positioning on aside itself.
+    top: 0;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    width: $nav-width;
+    background-color: $second;
+}

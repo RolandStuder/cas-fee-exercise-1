@@ -1,0 +1,44 @@
+@import 'fixed-layout';
+
+div.wrapper {
+    position: absolute; //why does relative not work here? -> no height?
+    
+}
+
+main .content {
+    float: left;
+    width: $relative-content-width;
+}
+
+main .content:before { // Pseudo element for background-stretching;
+
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    right: $relative-aside-width;
+    left: 0;
+    background-color: $third;
+}
+
+
+main aside {
+    float: right;
+    width: $relative-aside-width;
+}
+
+
+
+main aside:before { // Pseudo element for background-stretching;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    left: $relative-content-width;
+    right: 0;
+    background-color: $second;
+
+}
+

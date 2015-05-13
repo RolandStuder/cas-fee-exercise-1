@@ -1,0 +1,60 @@
+/* Layout */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+
+    font-family: sans-serif;
+    line-height: 1.75em;
+}
+
+/* shared among layout variations */
+
+// colors:
+$first: #6C788E;
+$second: #CFD5E1;
+$third: #EDEDF2;
+$fourth: #FCFDFF;
+
+header, footer { background-color: $first; color: $fourth; }
+nav { background-color: $second; }
+div.content { background-color: $third; }
+aside { background-color: $second; }
+
+header,
+nav,
+div.content,
+aside,
+footer {
+    padding: 1em;
+    margin: 0em;
+}
+
+header,footer {
+    overflow: hidden;
+}
+
+main {
+    overflow: auto;
+}
+
+// Size variables
+
+$header-height: 6em;
+$footer-height: 4em;
+$nav-width: 12em;
+
+$relative-content-width: 70%;
+$relative-aside-width: 100% - $relative-content-width;
+
+
+.solution-a { @import 'a'; } // Variation a: Fixed positions with equal height coumns in main
+.solution-b { @import 'b'; } // Variation a with fixed width aside, makes it quite a mess...s
+.solution-c { @import 'c'; } // Flexbox implementation of a
+.solution-d { @import 'd'; } // Withouth fixed elements, fluid design;
+.solution-e { @import 'e'; } // Without fixed elements, fixed widths for aside and nav;

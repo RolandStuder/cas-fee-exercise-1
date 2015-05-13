@@ -1,0 +1,45 @@
+main {
+	position: relative;
+}
+
+nav {
+	width: $nav-width;
+	float: left;
+}
+
+.content {
+	margin-left: $nav-width;
+	margin-right: $nav-width;
+}
+
+aside {
+	float: right; 
+	width: $nav-width;
+	top: 0px;
+	right: 0px;
+}
+
+nav:before, .content:before, aside {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+nav:before {
+	left: 0;
+	width: $nav-width;
+	background-color: $second;
+}
+
+.content:before {
+	left: $nav-width;
+	right: $nav-width;
+	background-color:  $third;
+}
+
+aside {
+	right: 0;
+	width: $nav-width; 
+}

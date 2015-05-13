@@ -1,0 +1,66 @@
+@import 'alternate-layout';
+
+nav {
+    float: left;
+    width: 20%;
+}
+
+.content {
+    float: left;
+    width: 60%;
+}
+
+aside {
+    float: left;
+    width: 20%;
+}
+
+// main {
+//   background-image: -webkit-gradient(linear,
+//     left top,
+//     right top,
+//     color-stop(0, $second),
+//     color-stop(20%, $second),
+//     color-stop(20%, $third),
+//     color-stop(80%, $third),
+//     color-stop(80%, $second),
+//     color-stop(100%, $second)
+//     );
+//   background-image: -webkit-linear-gradient(
+//     left,
+//     $second,
+//     $second 20%,
+//     $third 20%,
+//     $third 80%,
+//     $second 80%,
+//     $second 100%
+//     );
+//   background-image: -moz-linear-gradient(
+//     left,
+//     $second,
+//     $second 20%,
+//     $third 20%,
+//     $third 80%,
+//     $second 80%,
+//     $second 100%
+//     );
+//   background-image: -ms-linear-gradient(
+//     left,
+//     $second,
+//     $second 20%,
+//     $third 20%,
+//     $third 80%,
+//     $second 80%,
+//     $second 100%
+//     );
+//   background-image: -o-linear-gradient(
+//     left,
+//     $second,
+//     $second 20%,
+//     $third 20%,
+//     $third 80%,
+//     $second 80%,
+//     $second 100%
+//     );
+
+// }

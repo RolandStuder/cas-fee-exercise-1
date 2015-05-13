@@ -1,0 +1,25 @@
+@import 'fixed-layout';
+
+main {
+    position: absolute;
+    top: $header-height;
+    right: 0em;
+    bottom: $footer-height;
+    left: $nav-width;
+}
+
+.wrapper {
+    display: flex;
+}
+
+main .content {
+    order: 1;
+    flex: 4;
+    overflow: auto;
+}
+
+main aside {
+    order: 2;
+    flex: 1;
+    overflow: hidden;
+}
